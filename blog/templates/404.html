@@ -1,8 +1,24 @@
-{% extends 'blog/base.html' %}
+{% extends 'music/base_escola.html' %}
 
 {% block content %}
-	<div class="404">
-		<h1> PÁGINA NÃO ENCONTRADA</h1>	<br>
-		<h2> Verifique sua URL e tente novamente.</h2>
+	
+<div id="page404" class="carousel slide" data-ride="carousel">
+		
+	<ol class="carousel-indicators">
+		<li data-target="#page404" data-slide-to="0"></li>
+	</ol>
+	
+	<div class="carousel-inner">
+		
+		<div class="carousel-item active" class="active">
+			{% load static %} 
+			<img src="{% static 'img/404.jpg' %}" class="img-fluid d-block">
+			<div class="carousel-caption d-none d-md-block">
+				<h1 class="display-1">PÁGINA NÃO ENCONTRADA</h1>
+				<h1>Verifique sua URL e tente novamente.</h1>
+			</div>
+		</div>
 	</div>
+</div>
+
 {% endblock %}

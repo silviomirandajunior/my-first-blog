@@ -2,7 +2,98 @@
 
 {% block content%}
 
-	DESENVOLVER A PAGINA CURSO DE TECLADO DA ESCOLA DE MÚSICA.
+	<div id="carouselTeclado" class="carousel slide" data-ride="carousel">
+	
+	<ol class="carousel-indicators">
+		<li data-target="#carouselTeclado" data-slide-to="0"></li>
+	</ol>
+	
+	<div class="carousel-inner">
+		
+		<div class="carousel-item active" class="active">
+			{% load static %} 
+			<img src="{% static 'img/teclado2.jpg' %}" class="img-fluid d-block">
+			<div class="carousel-caption d-none d-md-block">
+				<h1 class="display-1">Faça uma aula grátis</h1>
+				<h1>Aula de piano com professores especializados.</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-12 text-center my-5">
+			<h1 class="display-3">Lorem Ipsum</h1>
+			<p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</p>
+		</div>
+	
+	</div>
+	
+	<div class="row mb-5">
+		<div class="col-sm-6 col-md-4 mb-3">
+			<nav id="navbarVertical" class="navbar navbar-light bg-light">
+				<nav class="nav nav-pills flex-column">
+					<a class="nav-link" href="#item1">Titulo1</a>
+						<nav class="nav nav-pills flex-column">
+							<a class="nav-link ml-3" href="#item1-1">Subtitulo1-1</a>
+							<a class="nav-link ml-3" href="#item1-2">Subtitulo1-2</a>
+						</nav>
+					<a class="nav-link my-2" href="#item2">Titulo2</a>
+					<a class="nav-link my-2" href="#item3">Titulo3</a>
+						<nav class="nav nav-pills flex-column">
+							<a class="nav-link ml-3" href="#item3-1">Subtitulo3-1</a>
+							<a class="nav-link ml-3" href="#item3-2">Subtitulo3-2</a>
+						</nav>
+				</nav>
+			</nav>
+		</div>
+		<div class="col-sm-6 col-md-8">
+			<div data-spy="scroll" data-target="#navbarVertical" data-offset="0" class="scrollspySite">
+				<h4 id="item1">Titulo1</h4>
+				<p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+				The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+				t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+				The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+				
+				<h5 id="item1-1">Subtitulo1-1</h5>
+				<p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+				The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters
+				t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+				The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+				
+				<h5 id="item1-2">Subtitulo1-2</h5>
+				<p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+				The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters
+				t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+				The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+				
+				<h4 id="item2">Titulo2</h4>
+				<p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+				The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters
+				t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+				The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+				
+				<h4 id="item3">Titulo3.</h4>
+				<p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+				The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters
+				t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+				The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+				
+				<h5 id="item3-1">Subtitulo3-1</h5>
+				<p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+				The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letterst 
+				is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+				The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+				
+				<h5 id="item3-2">Subtitulo3--2</h5>
+				<p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+				The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters
+				t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+				The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+			</div>
+		</div>
+	</div>
+</div>
 
 {% endblock%}
-

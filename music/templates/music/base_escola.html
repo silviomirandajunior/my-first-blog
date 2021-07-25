@@ -111,18 +111,54 @@
 		{% block content %}
 		{% endblock %}
 
+	<footer> 
 	<div class="jumbotron jumbotron-fluid" style="margin-bottom:0">
-		<div class="container">
-			<div class="row">
-				<div class="col-12 text-center">
-					<h1 class="display-3">Rodapé</h1>
-					<p class="lead">paragrafo do rodape.paragrafo do rodape.paragrafo do rodape.</p>
-					<hr>
-				</div>
+		<div id="contact-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 class="main-title">Entre em contato</h1>
+						</div>
+						<div class="col-md-4 contact-box">
+							<i class="fas fa-phone"></i>
+							<p><span class="contact-title">Ligue para:</span> (47)99111-7627</p>
+							<p><span class="contact-title">Horário:</span> 08:00 - 18:00</p>
+						</div>
+						<div class="col-md-4 contact-box">
+							<i class="fas fa-envelope"></i>
+							<p><span class="contact-title">Envie um email:</span> silviomirandajunior@hotmail.com</p>
+						</div>
+						<div class="col-md-4 contact-box">
+							<i class="fas fa-map-marker-alt"></i>
+							<p><span class="contact-title">Venha tomar um café:</span> Rua Lorem Ipsum - 1300</p>
+						</div>
+						
+						<div class="col-md-6" id="msg-box">
+							<p>Ou nos deixe uma mensagem:</p>
+						</div>
+						<div class="col-md-6" id="contact-form">
+							<form action="">
+								<input type="email" class="form-control" placeholder="E-mail" name="email">
+								<input type="text" class="form-control" placeholder="Assunto" name="subject">
+								<text-area class="form-control" rows="3" placeholder="Sua mensagem..." name="message"></text-area>
+								<input type="submit" class="main-btn" value="Enviar">
+							</form>
+						</div>
+					</div>
+				
 			</div>
 		</div>
 	</div>
-
+	
+	<div id="copy-area">
+		<div class="row">
+			<div class="col-md-12">
+				<p>Desenvolvido por Silvio Miranda Junior &copy;</p>
+			</div>
+		</div>
+	</div>
+	
+	</footer>
 </body>
 
 </html>
