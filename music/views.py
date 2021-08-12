@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView
-from .models import Contato, TrabalheConosco, Professor
+from .models import Contato, TrabalheConosco, Professores
 from django.urls import reverse_lazy
 
 def pagina_inicial(request):
@@ -65,7 +65,7 @@ class TrabalheConoscoCreate(CreateView):
     succes_url = reverse_lazy('/')
     
 class ProfessorCreate(CreateView):
-    model = Professor
+    model = Professores
     fields = ['nome', 'telefone', 'email', 'formacao', 'instrumento', 'comentario',]
     template_name = 'music/professores.html'
     succes_url = reverse_lazy('/')

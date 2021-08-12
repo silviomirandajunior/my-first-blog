@@ -71,7 +71,7 @@ class TrabalheConosco(models.Model):
     def __str__(self):
         return self.nome
 
-class Professor(models.Model):
+class Professores(models.Model):
 
     nome = models.CharField(required=True)
     telefone = models.CharField(required=True, max_length=12)
