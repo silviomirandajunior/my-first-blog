@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'music',
+    'crispy_forms',
 ]
 
 
@@ -120,6 +121,9 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
+
+###CRISPY
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 

@@ -1,13 +1,14 @@
 from django.urls import path
 from . import views
+from .views import ContatoCreate, TrabalheConoscoCreate, ProfessorCreate
 
 urlpatterns = [
     path('', views.pagina_inicial, name='pagina_inicial'),
     path('sobre/', views.sobre, name='sobre'),
     path('material/', views.material, name='material'),
     path('contato/', views.contato, name='contato'),
-    path('trabalhe_conosco/', views.trabalhe_conosco, name='trabalhe_conosco'),
-    path('professores/', views.professores, name='professores'),
+    path('trabalhe_conosco/', TrabalheConoscoCreate.as_view(), name='trabalhe_conosco'),
+    path('professores/', ProfessorCreate.as_view(), name='professores'),
     path('cursos/piano', views.cursos_piano, name='cursos_piano'),
     path('cursos/teclado', views.cursos_teclado, name='cursos_teclado'),
     path('cursos/violao', views.cursos_violao, name='cursos_violao'),

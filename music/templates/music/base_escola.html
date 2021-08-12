@@ -1,4 +1,7 @@
 {% load static %}
+
+{% load crispy_forms_tags %}
+
 <html lang="en">
 
 <head>
@@ -82,10 +85,10 @@
 			Social
 			</a>
 			<div class="dropdown-menu">
-				<a class="dropdown-item" href="#">Facebook</a>
-				<a class="dropdown-item" href="#">Twitter</a>
-				<a class="dropdown-item" href="#">Instagram</a>
-				<a class="dropdown-item" href="#">Whatsapp</a>
+				<a class="dropdown-item" href="https://www.facebook.com/" target="_blank">Facebook</a>
+				<a class="dropdown-item" href="https://twitter.com/twitter" target="_blank">Twitter</a>
+				<a class="dropdown-item" href="https://www.instagram.com/" target="_blank">Instagram</a>
+				<a class="dropdown-item" href="https://www.whatsapp.com/?lang=pt_br" target="_blank">Whatsapp</a>
 			</div>
 		  </li>
 	  
@@ -136,11 +139,13 @@
 						<div class="col-md-6" id="msg-box">
 							<p>Ou nos deixe uma mensagem:</p>
 						</div>
+						
+						
 						<div class="col-md-6" id="contact-form">
 							<form action="">
 								<input type="email" class="form-control" placeholder="E-mail" name="email">
 								<input type="text" class="form-control" placeholder="Assunto" name="subject">
-								<text-area class="form-control" rows="3" placeholder="Sua mensagem..." name="message"></text-area>
+								<input type="text" class="form-control" placeholder="Texto" name="subject">
 								<input type="submit" class="main-btn" value="Enviar">
 							</form>
 						</div>
@@ -149,6 +154,8 @@
 			</div>
 		</div>
 	</div>
+	
+	
 	
 	<div id="copy-area">
 		<div class="row">

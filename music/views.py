@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
+from .models import Contato, TrabalheConosco, Professor
+from django.urls import reverse_lazy
 
 def pagina_inicial(request):
     return render(request, 'music/pagina_inicial.html', {})
@@ -50,3 +53,19 @@ def cursos_canto(request):
 
 def cursos_teoria_musical(request):
     return render(request, 'music/cursos_teoria_musical.html', {})
+
+class ContatoCreate(CreateView):
+    model = Contato
+    fields = ['email', 'assunto', 'texto']
+    
+class TrabalheConoscoCreate(CreateView):
+    model = TrabalheConosco
+    fields = ['nome', 'telefone', 'email', 'formacao', 'instrumento', 'comentario',]
+    template_name = 'music/trabalhe_conosco.html'
+    succes_url = reverse_lazy('/')
+    
+class ProfessorCreate(CreateView):
+    model = Professor
+    fields = ['nome', 'telefone', 'email', 'formacao', 'instrumento', 'comentario',]
+    template_name = 'music/professores.html'
+    succes_url = reverse_lazy('/')
