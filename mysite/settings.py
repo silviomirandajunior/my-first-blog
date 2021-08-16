@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'blog',
     'music',
     'crispy_forms',
+    'anymail',
 ]
 
 
@@ -132,3 +133,17 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
+### EMAIL BACKEND
+EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"
+DEFAULT_FROM_EMAIL = "silviomirandajunior2@gmail.com"
+SERVER_EMAIL = DEFAULT_FROM_EMAIL
+ANYMAIL = {
+    "MAILGUN_API_KEY": "0cd41cee09e1855a1bb0eff686e79f9d-9ad3eb61-e9f74943",
+    "MAILGUN_SENDER_DOMAIN": "",
+}
+
+
+###user
+AUTH_USER_MODEL = 'music.CustomUser'

@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView
+from .forms import CustomUserCreationForm
 from .models import Contato, TrabalheConosco, Professores
 from django.urls import reverse_lazy
+from django.views import generic
+
 
 def pagina_inicial(request):
     return render(request, 'music/pagina_inicial.html', {})
@@ -69,3 +72,8 @@ class ProfessorCreate(CreateView):
     fields = ['nome', 'telefone', 'email', 'formacao', 'instrumento', 'comentario',]
     template_name = 'music/professores.html'
     succes_url = reverse_lazy('/')
+    
+class SignUp(generic.CreateView):
+    form_class = CustomUserCreationForm
+    success_url = reverse_lazy('login')
+    template_name = 'registration/signup.html'

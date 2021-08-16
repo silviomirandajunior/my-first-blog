@@ -4,6 +4,7 @@ from django.utils import timezone
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
 from django import forms
+from django.contrib.auth.models import AbstractUser
 
 class Disciplina(models.Model):
     titulo = models.CharField(max_length=200)
@@ -58,12 +59,12 @@ class Contato(models.Model):
 
 class TrabalheConosco(models.Model):
 
-    nome = models.CharField()
-    telefone = models.CharField()
-    email = models.EmailField(required=True, label='Remetente')
-    formacao = models.CharField(required=True)
-    instrumento = models.CharField(required=True)
-    comentario = models.CharField(widget=forms.Textarea, label='Mensagem')
+    nome = models.CharField(max_length=100)
+    telefone = models.CharField(max_length=12)
+    email = models.EmailField()
+    formacao = models.CharField(max_length=100)
+    instrumento = models.CharField(max_length=50)
+    comentario = models.CharField(max_length=300)
     
     def cadastrar(self):
         self.save()
@@ -73,15 +74,21 @@ class TrabalheConosco(models.Model):
 
 class Professores(models.Model):
 
-    nome = models.CharField(required=True)
-    telefone = models.CharField(required=True, max_length=12)
-    email = models.EmailField(required=True, label='Remetente')
-    formacao = models.CharField(required=True)
-    instrumento = models.CharField(required=True)
-    comentario = models.CharField(widget=forms.Textarea, label='Mensagem')
+    nome = models.CharField(max_length=100)
+    telefone = models.CharField(max_length=12)
+    email = models.EmailField()
+    formacao = models.CharField(max_length=100)
+    instrumento = models.CharField(max_length=50)
+    comentario = models.CharField(max_length=300)
     
     def cadastrar(self):
         self.save()
 
     def __str__(self):
         return self.nome
+
+
+class CustomUser(AbstractUser):
+    
+    def __str__(self):
+        return self.namezzzzzzzzzz

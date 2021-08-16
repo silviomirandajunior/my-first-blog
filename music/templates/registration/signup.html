@@ -1,0 +1,22 @@
+{% extends "music/base_escola.html" %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    
+	<h4 class="display-4 text-center">Sign Up!</h4>
+	<br>
+	<hr>
+	<br>
+	
+	<form method="post" class="form ml-5 mr-5">
+	
+    {% csrf_token %}
+		
+		{{ form|crispy}}
+    
+	<input type="submit" class="btn btn-secondary" value="Sign Up"/>
+	</form>
+{% endblock %}

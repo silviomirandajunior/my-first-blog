@@ -20,4 +20,5 @@ urlpatterns = [
     path('cursos/madeiras', views.cursos_madeiras, name='cursos_madeiras'),
     path('cursos/canto', views.cursos_canto, name='cursos_canto'),
     path('cursos/teoria_musical', views.cursos_teoria_musical, name='cursos_teoria_musical'),
+    path('accounts/signup/', views.SignUp.as_view(), name='signup')
 ]
